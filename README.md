@@ -26,7 +26,11 @@ MARIADB_ROOT_PASSWORD=bigdata+
 
 Run the following command to start the MariaDB container:
 
+MacOS:
 `docker-compose --env-file .env up -d`
+
+Pi:
+`docker compose --env-file .env up -d`
 
 ## Verify
 
