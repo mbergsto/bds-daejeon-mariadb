@@ -11,3 +11,9 @@ CREATE TABLE IF NOT EXISTS game_metadata (
     scrape_run_id INT,
     FOREIGN KEY (scrape_run_id) REFERENCES scrape_runs(id)
 );
+
+CREATE TABLE IF NOT EXISTS processed_team_stats (
+    team_name VARCHAR(255) PRIMARY KEY,
+    snapshot JSON NOT NULL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
